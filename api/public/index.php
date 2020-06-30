@@ -23,7 +23,9 @@ function getConnection() {
 }
 
 $app->get('/', function (Request $request, Response $response, $args) {
-    $response->getBody()->write("Hello world!");
+	$response->getBody()->write('Welcome to the Hostgator Challenge. Please feel free to use the public methods:<br/>');
+	$response->getBody()->write('[GET] /prices: Lists the prices of all the products.<br/>');
+	$response->getBody()->write('[GET] /prices/{id}: Lists the prices of a specific product.');
     return $response;
 });
 
